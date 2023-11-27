@@ -20,7 +20,7 @@ jobs:
           mkdir -p /tmp/smithy
           curl -L https://github.com/smithy-lang/smithy/releases/download/1.41.1/smithy-cli-linux-x86_64.tar.gz -o /tmp/smithy-cli-linux.tar.gz
           tar xvzf /tmp/smithy-cli-linux.tar.gz -C /tmp/smithy
-          /tmp/smithy/install
+          sudo /tmp/smithy/install
       - name: build smithy plugins
         run: |
           cd $GITHUB_WORKSPACE/rust && ./gradlew publishToMavenLocal
