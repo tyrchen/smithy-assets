@@ -10,6 +10,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,12 +39,15 @@ jobs:
       - name: make sure smithy build works
         run: |
           cd $GITHUB_WORKSPACE && smithy build
+      - name: list .m2 directory
+        run: |
+          ls -la .m2
       - name: compress .m2 directory
         run: |
-          cd ${{ runner.home }} && tar -czf assets.tar.gz .m2
+          tar -czf assets.tar.gz .m2
       - name: Release with assets
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            ${{ runner.home }}/assets.tar.gz
+            assets.tar.gz
