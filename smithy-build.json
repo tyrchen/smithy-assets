@@ -12,7 +12,6 @@
       "software.amazon.smithy.python:smithy-python-codegen:0.1.0",
       "software.amazon.smithy.typescript:smithy-typescript-codegen:0.19.0",
       "software.amazon.smithy:smithy-swift-codegen:0.1.0",
-      "software.amazon.smithy.kotlin:smithy-kotlin-codegen:0.30.2-SNAPSHOT",
       "software.amazon.smithy.rust.codegen:codegen-client:0.1.0",
       "software.amazon.smithy.rust.codegen.server.smithy:codegen-server:0.1.0"
     ]
