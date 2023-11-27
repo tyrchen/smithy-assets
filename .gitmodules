@@ -1,0 +1,12 @@
+[submodule "rust"]
+	path = rust
+	url = https://github.com/smithy-lang/smithy-rs
+[submodule "swift"]
+	path = swift
+	url = https://github.com/smithy-lang/smithy-swift
+[submodule "typescript"]
+	path = typescript
+	url = https://github.com/smithy-lang/smithy-typescript
+[submodule "python"]
+	path = python
+	url = https://github.com/smithy-lang/smithy-python
