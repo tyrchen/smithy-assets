@@ -1,0 +1,41 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install Smithy
+        run: |
+          mkdir -p /tmp/smithy
+          curl -L https://github.com/smithy-lang/smithy/releases/download/1.41.1/smithy-cli-linux-x86_64.tar.gz -o /tmp/smithy-cli-linux.tar.gz
+          tar xvzf /tmp/smithy-cli-linux.tar.gz -C /tmp/smithy
+          /tmp/smithy/install
+      - name: build smithy plugins
+        run: |
+          cd $GITHUB_WORKSPACE/rust && ./gradlew publishToMavenLocal
+          cd $GITHUB_WORKSPACE/python/codegen && ./gradlew publishToMavenLocal
+          cd $GITHUB_WORKSPACE/swift && ./gradlew publishToMavenLocal
+          cd $GITHUB_WORKSPACE/typescript && ./gradlew publishToMavenLocal
+      - name: make sure smithy build works
+        run: |
+          cd $GITHUB_WORKSPACE && smithy build
+      - name: compress .m2 directory
+        run: |
+          cd ${{ runner.home }} && tar -czf assets.tar.gz .m2
+      - name: Release with assets
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            ${{ runner.home }}/assets.tar.gz
