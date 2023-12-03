@@ -1,5 +1,6 @@
-do_nothing:
-	@echo "Nothing to do"
+update_submodules:
+	@git submodule update --init
+	@git submodule update --recursive --remote
 
 release:
 	@git cliff -o CHANGELOG.md
