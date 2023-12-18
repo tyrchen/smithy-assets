@@ -30,7 +30,7 @@ jobs:
       - name: Install Smithy
         run: |
           mkdir -p /tmp/smithy
-          curl -L https://github.com/smithy-lang/smithy/releases/download/1.41.1/smithy-cli-linux-x86_64.tar.gz -o /tmp/smithy-cli-linux.tar.gz
+          curl -L https://github.com/smithy-lang/smithy/releases/download/1.42.0/smithy-cli-linux-x86_64.tar.gz -o /tmp/smithy-cli-linux.tar.gz
           tar xvzf /tmp/smithy-cli-linux.tar.gz -C /tmp/smithy
           sudo /tmp/smithy/install
       - name: build smithy plugins
@@ -45,9 +45,19 @@ jobs:
       - name: compress .m2 directory
         run: |
           tar -czf assets.tar.gz $HOME/.m2
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v2
+        id: git-cliff
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          config: cliff.toml
+          args: -vv --latest --strip header
+        env:
+          OUTPUT: CHANGES.md
       - name: Release with assets
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
+          body: ${{ steps.git-cliff.outputs.content }}
           files: |
             assets.tar.gz
