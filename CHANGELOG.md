@@ -5,9 +5,17 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Bug Fixes
+
+- openapi version should be 1.42.0 - ([841f833](https://github.com/tyrchen/smithy-docker/commit/841f833bca91392c9cf1394fcf9a7c77c55c9667)) - Tyr Chen
+
 ### Features
 
 - update submodules - ([8e82d1d](https://github.com/tyrchen/smithy-docker/commit/8e82d1dbdcf389173ccd20f06148e0a98cdf9d63)) - Tyr Chen
+
+### Other
+
+- Update CHANGELOG.md - ([5e1ae06](https://github.com/tyrchen/smithy-docker/commit/5e1ae0652868ca3d5be5044d22a68627bbeb7d10)) - Tyr Chen
 
 ---
 ## [0.2.0](https://github.com/tyrchen/smithy-docker/compare/v0.1.0..v0.2.0) - 2023-12-03
