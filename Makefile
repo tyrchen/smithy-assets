@@ -14,4 +14,4 @@ release:
 	@git tag `cat VERSION`
 	@git push origin master --tags
 
-.PHONY: release
+.PHONY: release build update_submodules
