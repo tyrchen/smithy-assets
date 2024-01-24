@@ -7,7 +7,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Miscellaneous Chores
 
+- update submodules - ([0c03a54](https://github.com/tyrchen/smithy-docker/commit/0c03a54857e30d2a364c3a72abe4c4e326d2d506)) - Tyr Chen
+
+---
+## [0.3.1](https://github.com/tyrchen/smithy-docker/compare/v0.3.0..v0.3.1) - 2023-12-28
+
+### Miscellaneous Chores
+
 - update to latest sub modules - ([2e5958c](https://github.com/tyrchen/smithy-docker/commit/2e5958ccb654875f842e4afee4d24b0eacc96064)) - Tyr Chen
+
+### Other
+
+- Update CHANGELOG.md - ([bf6e80e](https://github.com/tyrchen/smithy-docker/commit/bf6e80ea20232aba862d342d98e3d672a61d44f7)) - Tyr Chen
 
 ---
 ## [0.3.0](https://github.com/tyrchen/smithy-docker/compare/v0.2.0..v0.3.0) - 2023-12-18
