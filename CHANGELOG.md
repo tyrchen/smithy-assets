@@ -5,9 +5,20 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Bug Fixes
+
+- upgrade smithy cli - ([82c9616](https://github.com/tyrchen/smithy-docker/commit/82c9616bbec12a94abdc3bbf2d8e3cb568be8aea)) - Tyr Chen
+
+---
+## [0.3.2](https://github.com/tyrchen/smithy-docker/compare/v0.3.1..v0.3.2) - 2024-01-24
+
 ### Miscellaneous Chores
 
 - update submodules - ([0c03a54](https://github.com/tyrchen/smithy-docker/commit/0c03a54857e30d2a364c3a72abe4c4e326d2d506)) - Tyr Chen
+
+### Other
+
+- Update CHANGELOG.md - ([13b2822](https://github.com/tyrchen/smithy-docker/commit/13b2822a6b66b0018e8d58af3708006c587cf86c)) - Tyr Chen
 
 ---
 ## [0.3.1](https://github.com/tyrchen/smithy-docker/compare/v0.3.0..v0.3.1) - 2023-12-28
