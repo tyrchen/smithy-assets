@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - fix smithy cli version - ([5d1342d](https://github.com/tyrchen/smithy-docker/commit/5d1342dda8a62408908a4a40522a5e16b46c0b38)) - Tyr Chen
 
+### Other
+
+- Update CHANGELOG.md - ([31a76e1](https://github.com/tyrchen/smithy-docker/commit/31a76e199c45250dcdcb19d763b9f394271665fe)) - Tyr Chen
+
 ---
 ## [0.3.4](https://github.com/tyrchen/smithy-docker/compare/v0.3.3..v0.3.4) - 2024-02-16
 
