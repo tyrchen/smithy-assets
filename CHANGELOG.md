@@ -5,9 +5,20 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Miscellaneous Chores
+
+- udpate submodules - ([c973a0b](https://github.com/tyrchen/smithy-docker/commit/c973a0bd24b362aa653296a19832ef751558b8fd)) - Tyr Chen
+
+---
+## [0.3.3](https://github.com/tyrchen/smithy-docker/compare/v0.3.2..v0.3.3) - 2024-01-24
+
 ### Bug Fixes
 
 - upgrade smithy cli - ([82c9616](https://github.com/tyrchen/smithy-docker/commit/82c9616bbec12a94abdc3bbf2d8e3cb568be8aea)) - Tyr Chen
+
+### Other
+
+- Update CHANGELOG.md - ([4d4f762](https://github.com/tyrchen/smithy-docker/commit/4d4f76231b3386dbcb2ede0dcb6958b89ba6038f)) - Tyr Chen
 
 ---
 ## [0.3.2](https://github.com/tyrchen/smithy-docker/compare/v0.3.1..v0.3.2) - 2024-01-24
