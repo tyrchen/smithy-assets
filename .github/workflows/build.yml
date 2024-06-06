@@ -32,9 +32,8 @@ jobs:
           mkdir -p /tmp/smithy
           curl -L https://github.com/smithy-lang/smithy/releases/download/1.49.0/smithy-cli-darwin-x86_64.zip -o /tmp/smithy-cli-darwin-x86_64.zip
           unzip /tmp/smithy-cli-darwin-x86_64.zip -d /tmp
-          mv /tmp/smithy-cli-darwin-x86_64 /tmp/smithy
-          ls -la /tmp/smithy
-          sudo /tmp/smithy/install
+          ls -la /tmp/smithy-cli-darwin-x86_64
+          sudo /tmp/smithy-cli-darwin-x86_64/install
       - name: build smithy plugins
         run: |
           cd $GITHUB_WORKSPACE/rust && ./gradlew publishToMavenLocal
