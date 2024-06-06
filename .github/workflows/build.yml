@@ -30,7 +30,7 @@ jobs:
       - name: Install Smithy
         run: |
           mkdir -p /tmp/smithy
-          curl -L https://github.com/smithy-lang/smithy/releases/download/1.45.0/smithy-cli-linux-x86_64.tar.gz -o /tmp/smithy-cli-linux.tar.gz
+          curl -L https://github.com/smithy-lang/smithy/releases/download/1.49.0/smithy-cli-darwin-x86_64.zip -o /tmp/smithy-cli-linux.tar.gz
           tar xvzf /tmp/smithy-cli-linux.tar.gz -C /tmp/smithy
           sudo /tmp/smithy/install
       - name: build smithy plugins
