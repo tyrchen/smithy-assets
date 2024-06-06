@@ -30,8 +30,8 @@ jobs:
       - name: Install Smithy
         run: |
           mkdir -p /tmp/smithy
-          curl -L https://github.com/smithy-lang/smithy/releases/download/1.49.0/smithy-cli-darwin-x86_64.zip -o /tmp/smithy-cli-linux.tar.gz
-          tar xvzf /tmp/smithy-cli-linux.tar.gz -C /tmp/smithy
+          curl -L https://github.com/smithy-lang/smithy/releases/download/1.49.0/smithy-cli-darwin-x86_64.zip -o /tmp/smithy-cli-darwin-x86_64.zip
+          7z x /tmp/smithy-cli-darwin-x86_64.zip -o/tmp/smithy
           sudo /tmp/smithy/install
       - name: build smithy plugins
         run: |
