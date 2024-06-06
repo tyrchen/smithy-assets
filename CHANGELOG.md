@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+## [0.3.11](https://github.com/tyrchen/smithy-docker/compare/v0.3.10..v0.3.11) - 2024-06-06
+
+### Other
+
+- Update CHANGELOG.md - ([22121f0](https://github.com/tyrchen/smithy-docker/commit/22121f075153900c0da20a02f9a3048afc8606b9)) - Tyr Chen
+
+---
 ## [0.3.10](https://github.com/tyrchen/smithy-docker/compare/v0.3.9..v0.3.10) - 2024-06-06
 
 ### Other

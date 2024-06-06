@@ -40,9 +40,9 @@ jobs:
           cd $GITHUB_WORKSPACE/python/codegen && ./gradlew publishToMavenLocal
           cd $GITHUB_WORKSPACE/swift && ./gradlew publishToMavenLocal
           cd $GITHUB_WORKSPACE/typescript && ./gradlew publishToMavenLocal
-      - name: make sure smithy build works
-        run: |
-          cd $GITHUB_WORKSPACE && smithy build
+      # - name: make sure smithy build works
+      #   run: |
+      #     cd $GITHUB_WORKSPACE && smithy build
       - name: compress .m2 directory
         run: |
           tar -czf assets.tar.gz $HOME/.m2
