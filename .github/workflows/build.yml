@@ -31,7 +31,8 @@ jobs:
         run: |
           mkdir -p /tmp/smithy
           curl -L https://github.com/smithy-lang/smithy/releases/download/1.49.0/smithy-cli-darwin-x86_64.zip -o /tmp/smithy-cli-darwin-x86_64.zip
-          7z x /tmp/smithy-cli-darwin-x86_64.zip -o/tmp/smithy
+          unzip /tmp/smithy-cli-darwin-x86_64.zip -d /tmp
+          mv /tmp/smithy-cli-darwin-x86_64 /tmp/smithy
           sudo /tmp/smithy/install
       - name: build smithy plugins
         run: |
